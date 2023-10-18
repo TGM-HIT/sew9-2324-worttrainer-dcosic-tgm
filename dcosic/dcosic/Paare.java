@@ -6,6 +6,11 @@ public class Paare {
 
 	private String bildURL;
 
+	public Paare(String wort, String bildURL) {
+		this.wort = wort;
+		this.bildURL = bildURL;
+	}
+
 	public void Paare() {
 		this.wort = getWort();
 		this.bildURL = getBildURL();

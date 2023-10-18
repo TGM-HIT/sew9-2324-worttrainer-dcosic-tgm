@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 
-public class Rechtschreibung extends Paare {
+public class Rechtschreibung {
 
 	private List<Paare> paare;
 
@@ -16,10 +16,11 @@ public class Rechtschreibung extends Paare {
 
 
 
-	public void randomPaar() {
+	public Paare randomPaar() {
 		Random random = new Random();
 		int randomIndex = random.nextInt(this.paare.size());
 		this.aktuellesPaar =  paare.get(randomIndex);
+		return this.aktuellesPaar;
 	}
 
 	public boolean wortCheck() {
@@ -30,5 +31,6 @@ public class Rechtschreibung extends Paare {
 
 		return false;
 	}
+
 
 }
