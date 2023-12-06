@@ -12,7 +12,6 @@ public interface Persistenz {
 		}
 	}
 
-
 	public default Rechtschreibung laden(String filepath) throws FileNotFoundException {
 		try (BufferedReader reader = new BufferedReader(new FileReader(filepath))) {
 			StringBuilder content = new StringBuilder();

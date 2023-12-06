@@ -14,6 +14,8 @@ public class Rechtschreibung {
 
 	private Persistenz persistenz;
 
+	public Rechtschreibung(List<Paare> wortpaare) {
+	}
 
 
 	public Paare randomPaar() {
@@ -23,7 +25,7 @@ public class Rechtschreibung {
 		return this.aktuellesPaar;
 	}
 
-	public boolean wortCheck() {
+	public boolean wortCheck(String benutzerAntwort) {
 		int counterRichtig = 0;
 		int counterFalsch = 0;
 
