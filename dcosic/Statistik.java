@@ -8,16 +8,22 @@ public class Statistik {
 
 	private int insgesamt;
 
-	public void Statistik() {
-		this.richtig = richtig;
-		this.falsch = falsch;
-		this.insgesamt = insgesamt;
-	}
 
 	public void aktualisieren(int richtig, int falsch) {
 			this.richtig = richtig;
 			this.falsch = falsch;
 			this.insgesamt = this.richtig + this.falsch;
 	}
+
+	public int getRichtig() {
+		return this.richtig;
+	}
+
+	public int getFalsch() {
+		return this.falsch;
+	}
+		public int getInsgesamt() {
+			return this.richtig + this.falsch;
+		}
 
 }

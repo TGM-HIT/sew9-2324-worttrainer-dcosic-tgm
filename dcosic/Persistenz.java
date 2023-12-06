@@ -12,22 +12,16 @@ public interface Persistenz {
 		}
 	}
 
-
-	public default Rechtschreibung laden(String filepath) {
-
-			String data = "";
-			try (BufferedReader reader = new BufferedReader(new FileReader(filepath)) {
-				String line;
-            while((line = reader.readLine()) != null) {
-					data += line + "\n"; // Füge die Zeile dem String hinzu
-				}
-			} catch (IOException e) {
-				e.printStackTrace();
-			} catch (FileNotFoundException e) {
-				throw new RuntimeException(e);
-			} catch (IOException e) {
-				throw new RuntimeException(e);
+	public default Rechtschreibung laden(String filepath) throws FileNotFoundException {
+		try (BufferedReader reader = new BufferedReader(new FileReader(filepath))) {
+			StringBuilder content = new StringBuilder();
+			String line;
+			while ((line = reader.readLine()) != null) {
+				content.append(line);
 			}
-			return data;
+			return null;
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
 	}
 }
