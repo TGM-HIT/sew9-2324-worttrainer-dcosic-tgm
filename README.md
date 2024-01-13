@@ -1,7 +1,7 @@
 # sew9-2324-worttrainer-dcosic-tgm
 sew9-2324-worttrainer-dcosic-tgm created by GitHub Classroom
 
-Ich habe mit dem UML angefangen. Anfangs hatte ich noch eine extra Klasse für das GUI und eine normale Linie zwischen den Klassen "Rechtschreibung" und "Paare". Außerdem haben mir Attribute und Methoden gefehlt.
+Ich habe mit dem UML-Diagramm angefangen. Anfangs hatte ich noch eine extra Klasse für das GUI und eine normale Linie zwischen den Klassen "Rechtschreibung" und "Paare". Außerdem haben mir Attribute und Methoden gefehlt.
 
 ![image](https://github.com/TGM-HIT/sew9-2324-worttrainer-dcosic-tgm/assets/94531869/f3ed308c-db0a-4dee-86a8-8f59b20528a6)
 
@@ -18,3 +18,8 @@ Die Beziehung zwischen "Rechtschreibung" und "Paare"/"Statistik" habe ich zu ein
 ## UML-Diagramm
 Das finale Diagramm sieht folgendermaßen aus: ![image](https://github.com/TGM-HIT/sew9-2324-worttrainer-dcosic-tgm/assets/94531869/2ba6a194-4944-4de9-9dd6-715a14e981f4)
 Ich habe die Beziehung der Persistenz-Klasse/Statistik-Klasse und "Rechtschreibung" geändert und die Attributnamen dazugeschrieben. 
+
+## Projektstruktur
+
+Control -> Main
+Model -> JsonPersistenz, Persistenz, 
