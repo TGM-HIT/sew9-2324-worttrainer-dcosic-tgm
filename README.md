@@ -19,7 +19,13 @@ Die Beziehung zwischen "Rechtschreibung" und "Paare"/"Statistik" habe ich zu ein
 Das finale Diagramm sieht folgendermaßen aus: ![image](https://github.com/TGM-HIT/sew9-2324-worttrainer-dcosic-tgm/assets/94531869/2ba6a194-4944-4de9-9dd6-715a14e981f4)
 Ich habe die Beziehung der Persistenz-Klasse/Statistik-Klasse und "Rechtschreibung" geändert und die Attributnamen dazugeschrieben. 
 
-## Projektstruktur
+## Von Anfang an
+Ich habe mein Projekt von neu angefangen, da ich mich nicht mehr ausgekannt habe. Außerdem waren die Namen für die Klassen auch sehr unübersichtlich für mich.
+Also habe ich mit dem UML-Diagramm von neu begonnen.
+![image](https://github.com/TGM-HIT/sew9-2324-worttrainer-dcosic-tgm/assets/94531869/ae82c38c-b4fb-4eb7-a9bd-6eb0b3dcce5d)
+
 
 Control -> Main
-Model -> JsonPersistenz, Persistenz, 
+Model -> WortTrainer, WortEintrag, WortListe, PersistenzInterface, Persistenz
+
+
