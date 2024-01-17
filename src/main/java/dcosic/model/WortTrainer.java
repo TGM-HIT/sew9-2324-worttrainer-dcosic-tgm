@@ -1,6 +1,9 @@
 package model;
+
 import java.io.IOException;
 import java.util.Random;
+import view.View;
+
 /**
  * Die Klasse, die die Statistik der Eingaben verwaltet & für das Speichern & Laden zuständig ist
  * @author Dunja Cosic
@@ -23,7 +26,10 @@ public class WortTrainer {
         this.ungueltig=0;
         this.persistenzInterface = persistenzInterface;
     }
-    //Konstruktor ohne Parameter
+
+    /**
+     * Konstruktor ohne Parameter
+     */
     public WortTrainer(){
         this.wortListe=new WortListe();
         this.fragen=0;
@@ -33,12 +39,15 @@ public class WortTrainer {
         this.persistenzInterface = new Persistenz();
     }
 
+    public WortTrainer(WortListe wortListe) {
+    }
+
     public WortListe getWortListe() {
         return wortListe;
     }
     /**
      * returned das Zufallswort an einer zufälligen Stelle, falls kein Wort drinnen ist, wird der Wert "null" zurückgegeben
-     * @return das zufällige wort, dass an ediner zuälligen stelle ausgewählt wird
+     * @return das zufällige wort, dass an ediner zuälligen Stelle ausgewählt wird
      */
     public WortEintrag getRandomWort() {
         boolean x=true;
@@ -130,6 +139,10 @@ public class WortTrainer {
         this.falsch += falsch;
     }
 
+    /**
+     * Methode zum Speichern des dateipfades
+     * @param filepath
+     */
     public void speichern(String filepath){
         try {
             persistenzInterface.speichern(filepath,this);
@@ -137,6 +150,11 @@ public class WortTrainer {
             throw new RuntimeException(e);
         }
     }
+
+    /**
+     * Laden des Dateipfads
+     * @param filepath
+     */
     public void laden(String filepath){
         try {
             persistenzInterface.laden(filepath,this);
@@ -144,6 +162,13 @@ public class WortTrainer {
             throw new RuntimeException(e);
         }
     }
+/**
+    //Methode zur Überprüfung, ob die Wortpaar-Liste leer ist
+    public boolean isMapEmpty() {
+        WortListe wortPaarList = jsonPersistence.load();
+        return wortPaarList.isEmpty();
+    }
+ */
 }
 
 

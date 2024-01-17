@@ -31,7 +31,7 @@ public class Main {
 
         //Worttrainer
         WortTrainer trainer = new WortTrainer(wortListe); //Konstruktor in WortTrainer
-        Persistenz sul = new Persistenz(trainer); //Konstruktor in Persistenz
+        Persistenz sul = new Persistenz(); //Konstruktor in Persistenz
         try {
             sul.laden(trainer); //WortTrainer in laden
         } catch (IOException e) {

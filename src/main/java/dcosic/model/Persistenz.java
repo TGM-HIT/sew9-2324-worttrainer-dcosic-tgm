@@ -14,7 +14,7 @@ import java.io.IOException;
 public class Persistenz implements PersistenzInterface{
 
     //Konstruktor
-    public Persistenz(WortTrainer trainer) {
+    public Persistenz() {
     }
 
     /**
@@ -32,8 +32,8 @@ public class Persistenz implements PersistenzInterface{
         writer.close();
     }
     /**
-     * speichert die Worteintraege und die Statistik dazu in der angegebenen Datei im Projekt Ordner
-     * @param wortTrainer Die Worteintraege und die Statistik
+     * speichert die Worteinträge und die Statistik in der angegebenen Datei
+     * @param wortTrainer Die Worteinträge und die Statistik
      */
     public void speichern(WortTrainer wortTrainer) throws IOException {
         speichern("WortTrainer.txt", wortTrainer);
@@ -53,9 +53,11 @@ public class Persistenz implements PersistenzInterface{
     }
     /**
      * lädt die Worteinträge und die Statistik in der angegebenen Datei im Projekt Ordner
+     *
      * @return Den Worttrainer mit den Daten aus der Datei
      */
-    public void laden(WortTrainer wortTrainer) throws IOException {
+    public WortListe laden(WortTrainer wortTrainer) throws IOException {
         laden("Worttrainer.txt", wortTrainer);
+        return null;
     }
 }

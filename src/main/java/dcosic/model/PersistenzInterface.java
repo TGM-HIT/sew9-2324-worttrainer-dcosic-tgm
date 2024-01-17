@@ -9,5 +9,5 @@ public interface PersistenzInterface {
 
     void laden(String filepath, WortTrainer wortTrainer) throws IOException;
 
-    void laden(WortTrainer wortTrainer) throws IOException;
+    WortListe laden(WortTrainer wortTrainer) throws IOException;
 }
